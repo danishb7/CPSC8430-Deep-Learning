@@ -1,1 +1,15 @@
-HW1
+There are 3 separate Jupyter Notebook files for the 3 main questions/tasks in the assignment.
+
+Question 1 - Deep vs Shallow
+Part 1 - Simulate a function
+The task required 2 models to be trained with approximately the same number of parameters until convergence. Furthermore, the following 2 graphs were plotted:-
+  1. Comparison of the models' training by displaying the loss in each epoch.
+  2. Ground truth and predictions made by both the models
+
+The 2 simulation functions considered here are sin(x) and x^3.
+
+Part 2 - Train on Actual Tasks
+The task required to train the CIFAR-10 dataset with a CNN model and thereafter visualize the training process by showing the loss and accuracy in 2 separate graphs.
+
+
+Question 2 - Optimization
