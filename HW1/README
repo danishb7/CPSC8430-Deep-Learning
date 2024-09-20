@@ -9,7 +9,26 @@ The task required 2 models to be trained with approximately the same number of p
 The 2 simulation functions considered here are sin(x) and x^3.
 
 Part 2 - Train on Actual Tasks
-The task required to train the CIFAR-10 dataset with a CNN model and thereafter visualize the training process by showing the loss and accuracy in 2 separate graphs.
+The task required training the CIFAR-10 dataset with a CNN model and then visualizing the training process by showing the loss and accuracy in 2 separate graphs.
 
 
 Question 2 - Optimization
+Visualizing the optimization process and plotting the below-given values:-
+  1. Collection of weights after regular intervals of epochs for different training events.
+  2. Accuracy/loss corresponding to the collected parameters.
+  3. Gradient norm during training
+  4. Loss against minimal ratio when the gradient is almost zero
+
+
+Question 3 - Generalization
+Part 1 - Can the network fit random labels?
+  1. Randomly shuffled the targets/labels in the CIFAR-10 dataset and trained the models.
+  2. Fitted the trained model with the shuffled labels.
+
+Part 2 - Number of parameters vs Generalization
+  1. Trained 10 similar-structured models with different numbers of parameters on the CIFAR-10 dataset.
+  2. Printed scatter plots for accuracy and loss for training and testing processes.
+
+Part 3 - Flatness vs Generalization
+  1. Trained 2 models with different batch sizes and recorded loss and accuracy for each model, which is the linear interpolation between both models.
+  2. Trained 5 models with different training approaches and recorded the loss, accuracy and sensitivity of all models.
