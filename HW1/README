@@ -1,6 +1,6 @@
 There are 3 separate Jupyter Notebook files for the 3 main questions/tasks in the assignment.
 
-Question 1 - Deep vs Shallow
+Question 1 - Deep vs Shallow (HW1_1.ipynb)
 Part 1 - Simulate a function
 The task required 2 models to be trained with approximately the same number of parameters until convergence. Furthermore, the following 2 graphs were plotted:-
   1. Comparison of the models' training by displaying the loss in each epoch.
@@ -12,7 +12,7 @@ Part 2 - Train on Actual Tasks
 The task required training the CIFAR-10 dataset with a CNN model and then visualizing the training process by showing the loss and accuracy in 2 separate graphs.
 
 
-Question 2 - Optimization
+Question 2 - Optimization (HW1_2.ipynb)
 Visualizing the optimization process and plotting the below-given values:-
   1. Collection of weights after regular intervals of epochs for different training events.
   2. Accuracy/loss corresponding to the collected parameters.
@@ -20,7 +20,7 @@ Visualizing the optimization process and plotting the below-given values:-
   4. Loss against minimal ratio when the gradient is almost zero
 
 
-Question 3 - Generalization
+Question 3 - Generalization (HW1_3.ipynb)
 Part 1 - Can the network fit random labels?
   1. Randomly shuffled the targets/labels in the CIFAR-10 dataset and trained the models.
   2. Fitted the trained model with the shuffled labels.
