@@ -29,7 +29,7 @@ Model Parameters and Evaluation
 •	Feature Size = 4096
 •	Size of Hidden State in LSTM = 512
 •	Optimizer = Adam 
-•	Vocab Size = 2982 (min frequency=4)
+•	Vocab Size = 3594 (min frequency=3)
 
 Dataset Details
 The dataset used in this project consists of two parts:
