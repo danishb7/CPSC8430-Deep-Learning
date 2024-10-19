@@ -1,20 +1,21 @@
 Problem Statement
 Generate a video caption for an input video using sequential-to-sequential model. The input for the
-code will be a video, and the output will be a stream of captions describing the actions in the video.
-The above is achieved by Recurrent Neural Networks.
+code will be a video, and the output will be a stream of captions describing the actions in the video
+along with the average BLEU score.
+The above is achieved by using Recurrent Neural Networks.
 
 Dataset
-Provided in class– contains 1450 videos for training and 100 videos for testing along with video features and captions/labels.
+Provided in class– contains 1450 videos for training and 100 videos for testing, along with video features and captions/labels.
   
 Introduction
-This project involves building a Sequence-to-Sequence (Seq2Seq) model aimed at generating captions for videos. In this assignment, 
-a Seq2Seq architecture comprising an encoder-decoder model with attention mechanisms, is trained on video data with captions.
-The dataset consists of videos, each associated with caption data provided in ‘.json’ format. This dataset is pre-processed and 
+This project involves building a Sequence-to-Sequence (Seq2Seq) model to generate video captions. In this assignment, 
+a Seq2Seq architecture comprising an encoder-decoder model with attention mechanisms is trained on video data with captions.
+The dataset consists of videos associated with caption data provided in ‘.json’ format. This dataset is pre-processed and 
 transformed to feed the model, which then learns to generate captions given video features.
 
 Model Architecture
 The core architecture of this Seq2Seq model is composed of the following:
-The provided Seq2Seq model consists of three main components: the Encoder, Decoder with Attention, and the Seq2Seq framework itself. 
+The provided Seq2Seq model consists of three main components: the Encoder, the Decoder with Attention, and the Seq2Seq framework. 
 1.	The Encoder processes video features by applying a linear transformation followed by a ReLU activation function, converting the 
     input features into a hidden representation.
 2.	The Decoder utilizes the encoded features and generates captions. It employs an embedding layer for the input captions, calculates 
@@ -42,7 +43,7 @@ the caption based on the context vector and attention weights.
 Training Process
 •	Epochs: The training loop runs for 100 epochs.
 •	Model Mode: The model is set to training mode with ‘seq2seq_model.train()’.
-•	Batch Iteration: For each epoch, it iterates over batches of features and captions from the training dataloader.
+•	Batch Iteration: Each epoch iterates over batches of features and captions from the training dataloader.
 •	Gradient Reset: The optimizer`s gradients are reset at the beginning of each batch using ‘optimizer.zero_grad()’.
 •	Forward Pass: The model performs a forward pass to predict outputs, using ‘captions[:, :-1]’ as input (excluding the last token).
 •	Targets Preparation: The targets are prepared by reshaping the captions to align with the predicted outputs using ‘targets = captions[:, 1:].reshape(-1)’.
@@ -55,5 +56,5 @@ Evaluation
 The evaluation function for the Seq2Seq model sets the model to evaluation mode using ‘seq2seq_model.eval()’. Within a ‘torch.no_grad()’ context, 
 it performs a forward pass to generate predictions based on input features and extracts predicted word indices using ‘torch.max’. Both predicted 
 indices and reference captions are converted to words via the ‘denumericalize’ function, filtering out ‘<PAD>’ tokens. The BLEU score for each 
-sample is computed with the ‘calculate_bleu’ function and accumulated. The function prints reference and predicted captions along with their BLEU 
+sample is computed and accumulated using the ‘calculate_bleu’ function. The function prints reference and predicted captions along with their BLEU 
 scores for inspection. Finally, the average BLEU score is calculated and printed, providing a metric of the model`s performance on the test dataset.
