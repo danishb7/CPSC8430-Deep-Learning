@@ -11,6 +11,7 @@ The dataset provided as part of the homework is used to train the model. The dat
 5351 for the purpose of testing. The data is in separate JSON files (test and train).
 
 Method
+
 A BERT sequence model is used for text-to-text generation, processing input text to produce output. The workflow begins with pre-processing 
 steps such as adding answer end markers, context processing, and lowercasing. This is followed by tokenization, where the text is converted 
 into tokens for the model. Next, relevant information is retrieved to formulate answers. The model is then trained on the dataset before 
